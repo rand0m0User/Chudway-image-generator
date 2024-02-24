@@ -1,0 +1,129 @@
+
+VERSION:2.1.5
+
+//STATION names must also be replaced in the entire file and be the same as in the TUBE links, or it wont "find" a connection and cause an error
+
+//FORMAT:<STATION keyword>:<picture coord X>:<picture coord Y>:<text offset X>:<text offset Y>:<icon name>:<location name>
+
+STATION:570:389:-70:0:interchange:Spawn
+STATION:457:262:64:-32:interchange:N. Chudvill
+STATION:424:408:0:32:interchange:Chudvill
+STATION:480:495:0:32:interchange:S. Chudvill
+STATION:375:515:0:32:interchange:'vill farms
+STATION:278:264:0:42:interchange:Chudlandia
+STATION:543:260:-16:-32:interchange:c' town
+STATION:345:42:90:0:interchange:Cobtown
+STATION:357:200:0:32:station:Spawn   islands
+STATION:525:42:48:32:interchange:Negroslovskaya
+STATION:617:20:0:-32:interchange:Africa
+STATION:623:82:0:-32:interchange:Dirt City
+STATION:770:87:-32:32:interchange:Dixie Sanctuyary
+STATION:925:100:-32:-32:station:SPROKE city
+STATION:751:175:-32:-32:station:Cogrodd
+STATION:592:179:0:22:station:Britt'
+STATION:634:138:-95:0:station:New Dixie
+STATION:619:258:0:42:interchange:Britt' union
+STATION:703:257:-32:-32:interchange:N. Chudgard
+STATION:710:458:0:32:station:Agartha
+STATION:696:577:-32:-32:station:S. Chudgard
+STATION:550:574:32:-32:station:MEDCITY
+STATION:281:523:0:0:dummy:trackswitch1
+STATION:281:455:0:32:station:pantheon
+STATION:281:377:0:32:station:City 17
+STATION:617:500:-16:-32:interchange:Mt.  Coal
+STATION:790:508:0:32:station:Chudgard
+STATION:892:594:0:32:station:Vaush's Stable
+STATION:959:663:0:32:station:777 777
+STATION:1036:660:32:-32:station:Pyramid
+STATION:617:659:0:-32:dummy:trackswitch2
+STATION:539:700:10:-32:interchange:Magma  Brige
+STATION:134:234:0:-32:station:Spleef Court
+STATION:145:379:32:32:station:Boris Station
+STATION:188:536:0:32:interchange:Brap Farms
+STATION:230:605:32:-32:station:Goyslopetrovsk
+STATION:232:101:0:0:dummy:Cobtown curve
+STATION:539:761:0:-32:interchange:Sidson Ice Farm
+STATION:594:832:0:0:closed:closed1
+STATION:306:538:0:-32:interchange:Britt' Embassy
+STATION:306:538:0:0:closed:closed2
+
+//line linkages, draws a colored line between two station names, the TUBECOMBO keyword is to be used for when a STATION has 2 parallel lines so one doesn't hide the other 
+//(go smaller than the default 10)
+//FORMAT:<TUBECOMBO keyword>:<place to start FROM>:<place to draw line TO>:<big endian 24 bit int color>:<new line width>
+
+//FORMAT:<TUBE keyword>:<place to start FROM>:<place to draw line TO>:<big endian 24 bit int color>
+//coal line
+TUBE:Spawn:N. Chudvill:0
+TUBE:N. Chudvill:Spawn   islands:0
+TUBE:Spawn   islands:Cobtown:0
+TUBE:Spawn:Mt.  Coal:0
+TUBE:Mt.  Coal:trackswitch2:0
+TUBE:trackswitch2:Magma  Brige:0
+TUBE:Magma  Brige:Sidson Ice Farm:0
+//lime line
+TUBE:Spawn:Chudvill:7064950
+TUBE:Spawn:c' town:7064950
+TUBE:c' town:Negroslovskaya:7064950
+//gem line
+TUBE:Chudvill:Chudlandia:63997
+TUBE:Chudlandia:Spleef Court:63997
+TUBE:Spleef Court:Boris Station:63997
+TUBE:Boris Station:Brap Farms:63997
+//red line
+TUBE:Chudvill:S. Chudvill:-188641
+TUBE:S. Chudvill:Mt.  Coal:-188641
+TUBE:Mt.  Coal:Chudgard:-188641
+TUBE:Chudgard:Vaush's Stable:-188641
+TUBE:Vaush's Stable:777 777:-188641
+TUBE:777 777:Pyramid:-188641
+//cob line (complete)
+TUBE:Cobtown:Negroslovskaya:-5726819
+TUBE:Negroslovskaya:Africa:-5726819
+TUBE:Africa:Dixie Sanctuyary:-5726819
+TUBE:Dixie Sanctuyary:Cogrodd:-5726819
+TUBE:Cogrodd:N. Chudgard:-5726819
+//dixon line
+TUBE:Britt' union:New Dixie:2815
+TUBE:New Dixie:Dirt City:2815
+TUBE:Dirt City:Dixie Sanctuyary:2815
+TUBE:Dixie Sanctuyary:SPROKE city:2815
+//paki express 
+TUBE:Africa:Dirt City:-2057398
+TUBE:Dirt City:Britt':-2057398
+TUBE:Britt':Britt' union:-2057398
+//purple circle 8200876
+TUBE:c' town:Britt' union:8200876
+TUBE:Britt' union:N. Chudgard:8200876
+TUBE:N. Chudgard:Agartha:8200876
+TUBE:Agartha:S. Chudgard:8200876
+TUBE:S. Chudgard:MEDCITY:8200876
+TUBE:MEDCITY:S. Chudvill:8200876
+TUBE:S. Chudvill:'vill farms:8200876
+TUBE:'vill farms:trackswitch1:8200876
+TUBE:trackswitch1:pantheon:8200876
+TUBE:pantheon:City 17:8200876
+TUBE:City 17:Chudlandia:8200876
+TUBE:Chudlandia:N. Chudvill:8200876
+TUBE:N. Chudvill:c' town:8200876
+TUBE:trackswitch1:Brap Farms:8200876
+//doll line -62737
+TUBE:Cobtown:Cobtown curve:-62737
+TUBE:Cobtown curve:Goyslopetrovsk:-62737
+TUBE:Goyslopetrovsk:'vill farms:-62737
+TUBECOMBO:'vill farms:S. Chudvill:-62737:4
+TUBE:S. Chudvill:Magma  Brige:-62737
+TUBECOMBO:Magma  Brige:Sidson Ice Farm:-62737:4
+TUBE:Sidson Ice Farm:closed1:-62737
+
+//FORMAT:<COLORS keyword>:<line name>:<big endian 24 bit int color>
+
+COLORS:Line Legend:0
+COLORS:- Chud Line:-188641
+COLORS:- Gem Line:63997
+COLORS:- Coal Line:0
+COLORS:- Lime Line:7064950
+COLORS:- Doll Line:-62737
+COLORS:- Dixon Line:2815
+COLORS:- Cob Line:-5726819
+COLORS:- Paki Express:-2057398
+COLORS:- purple Circle:8200876
